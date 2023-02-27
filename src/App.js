@@ -1,44 +1,57 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchSuperhero, savehero } from './features/superhero/superheroSlice';
+import React from 'react';
+import logo from './logo.svg';
+import { Counter } from './features/counter/Counter';
 import './App.css';
 
-
 function App() {
-
-  const dispatch = useDispatch();
-  const superheros = useSelector((state) => state.superhero?.value);
-
-  useEffect(() => {
-      dispatch(fetchSuperhero()).then((res) => {
-          dispatch(savehero(res))
-      })
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
-
-
   return (
-      <div className="App">
-
-          <div className="photo-grid grid grid-cols-2 gap-4 text-slate-200 ml-2 mr-2">
-              {superheros.payload?.map((item, index) => {
-                  return (
-                      <div className="md:flex flex-col rounded-xl  p-0 text-slate-100 items-center relative" key={index}>
-                          <img src={item.images.sm} alt={item.name} className="w-full rounded-xl" />
-                          <div className="photo-info absolute bottom-0 text-left  bg-slate-800/[.35] p-2 w-full rounded-b-xl">
-                              <h2 className='font-extrabold mb-1 drop-shadow-lg'>{item.name}</h2>
-
-                              <div className="font-light drop-shadow-lg">
-                                  <p> Height: {item.appearance.height[1]}</p>
-                                  <p> Weight: {item.appearance.weight[1]}</p>
-                              </div>
-                          </div>
-                      </div>
-                  )
-              }
-              )}
-          </div>
-
-      </div>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <Counter />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <span>
+          <span>Learn </span>
+          <a
+            className="App-link"
+            href="https://reactjs.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            React
+          </a>
+          <span>, </span>
+          <a
+            className="App-link"
+            href="https://redux.js.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Redux
+          </a>
+          <span>, </span>
+          <a
+            className="App-link"
+            href="https://redux-toolkit.js.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Redux Toolkit
+          </a>
+          ,<span> and </span>
+          <a
+            className="App-link"
+            href="https://react-redux.js.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            React Redux
+          </a>
+        </span>
+      </header>
+    </div>
   );
 }
 
