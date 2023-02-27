@@ -1,12 +1,17 @@
 
 .App {
   text-align: center;
+  margin: 20px auto 99.5px auto;
   width: 420px;
-  height: 800px;
-  margin-top: 20px;
-  margin-bottom: 99.5px;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+.photo-grid {
   overflow: scroll;
   overflow-x: hidden;
+  width: 420px;
+  height: 800px;
+}
+
+.photo-content {
+  max-height: 292px;
 }

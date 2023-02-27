@@ -21,7 +21,7 @@ function PhotoGrid({ superheros }) {
           {superheros?.map((item, index) => {
               return (
                 paginationRender(index) && (
-                  <div className="md:flex flex-col rounded-xl  p-0 text-slate-100 items-center relative" key={`superhero-${item.id}`}>
+                  <div className="photo-content md:flex flex-col rounded-xl  p-0 text-slate-100 items-center relative" key={`superhero-${item.id}`}>
                       <PhotoImg alt={item.name} images={item.images} />
                       <PhotoInfo item={item} />
                   </div>

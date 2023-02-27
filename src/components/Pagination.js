@@ -11,7 +11,7 @@ function Pagination({ handlePagination, pages }) {
     }
 
     return (
-        <div className="sticky bottom-0 z-10 bg-slate-200/[.9] flex justify-around">
+        <div className="absolute w-full bottom-0 z-10 bg-slate-200/[.9] flex justify-around">
             <button
                 onClick={() => { handleClick(- 1); }}
                 disabled={page === 0}
