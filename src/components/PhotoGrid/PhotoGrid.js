@@ -17,7 +17,7 @@ function PhotoGrid({ superheros }) {
 
   return (
     <>
-      <div className="photo-grid grid grid-cols-2 gap-4 text-slate-200  pb-7">
+      <div className="photo-grid grid grid-cols-2 gap-1 text-slate-200  pb-7">
           {superheros?.map((item, index) => {
               return (
                 paginationRender(index) && (
