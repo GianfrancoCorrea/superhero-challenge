@@ -11,10 +11,10 @@ function Pagination({ handlePagination, pages }) {
     }
 
     return (
-        <div className="absolute w-full bottom-0 z-10 bg-slate-200/[.9] flex justify-around">
+        <div className="absolute w-full bottom-0 z-10 p-0 bg-slate-200/[.9] flex justify-around mt-2">
             <button
                 onClick={() => { handleClick(- 1); }}
-                disabled={page === 0}
+                disabled={page === 1}
                 className="disabled:opacity-50 text-lg"
             >
                 {`< Prev`}
