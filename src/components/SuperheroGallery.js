@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchSuperhero } from '../reducers/superhero/superheroSlice';
-import PhotoGrid from '../components/PhotoGrid';
+import PhotoGrid from '../components/PhotoGrid/PhotoGrid';
 
 function SuperheroGallery({ search }) {
 
@@ -21,7 +21,6 @@ function SuperheroGallery({ search }) {
         );
         setSearchResults(results);
     }, [search, superheros]); 
-
 
     return (
         pending === true 
