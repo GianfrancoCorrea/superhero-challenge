@@ -1,24 +1,21 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchSuperhero } from './reducers/superhero/superheroSlice';
-import PhotoGrid from './components/PhotoGrid';
+import { useState } from 'react';
+import SuperheroGallery from './components/SuperheroGallery';
 import './App.css';
+import Search from './components/Search/Search';
 
 function App() {
 
-    const dispatch = useDispatch();
-    const [superheros, pending] = useSelector(({ superhero }) => [superhero.value, superhero.pending]);
+    const [search, setSearch] = useState('');
 
-    useEffect(() => {
-        dispatch(fetchSuperhero('all'))
-    }, []); // eslint-disable-line react-hooks/exhaustive-deps
+    const handleSearch = (e) => {
+        console.log(e.target.value);
+        setSearch(e.target.value);
+    }
 
     return (
-        <div className="App">
-            {pending === true 
-                ? <div>Loading...</div>
-                : <PhotoGrid superheros={superheros} />
-            }
+        <div className="App relative">
+           <Search handleSearch={handleSearch} />
+           <SuperheroGallery search={search} />
         </div>
     );
 }
