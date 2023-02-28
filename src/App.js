@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import SuperheroGallery from './components/SuperheroGallery';
-import './App.css';
 import Search from './components/Search';
+import './App.css';
 
 function App() {
     const [search, setSearch] = useState('');

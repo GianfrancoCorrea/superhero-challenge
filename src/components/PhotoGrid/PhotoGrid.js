@@ -34,8 +34,15 @@ function PhotoGrid({ superheroes }) {
                             className="photo-content md:flex flex-col rounded-xl  m-2 text-slate-100 items-center relative"
                             key={`superhero-${item.id}`}
                         >
-                            <PhotoImg alt={item.name} images={item.images} />
-                            <PhotoInfo item={item} />
+                            <PhotoImg
+                                alt={item.name}
+                                images={item.images}
+                            />
+                            <PhotoInfo
+                                name={item.name}
+                                height={item.appearance.height[1]}
+                                weight={item.appearance.weight[1]}
+                            />
                         </div>
                     )
                 ))}

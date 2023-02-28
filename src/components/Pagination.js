@@ -19,7 +19,7 @@ function Pagination({ handlePagination, pages, currentPage }) {
     return (
         <div className="absolute w-full bottom-0 z-10 p-0 bg-slate-200/[.9] flex justify-around mt-2 rounded-md">
             <button
-                onClick={() => { handleClick(-1); }}
+                onClick={() => handleClick(-1)}
                 className="disabled:opacity-50 text-lg"
                 disabled={page === 1}
                 type="button"
@@ -32,7 +32,7 @@ function Pagination({ handlePagination, pages, currentPage }) {
                 {pages}
             </p>
             <button
-                onClick={() => { handleClick(+1); }}
+                onClick={() => handleClick(+1)}
                 className="disabled:opacity-50 text-lg"
                 disabled={page === pages}
                 type="button"

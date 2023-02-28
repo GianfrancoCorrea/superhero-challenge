@@ -1,19 +1,13 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import LoadingPulse from './LoadingPulse';
 
 function PhotoImg({ alt, images }) {
     const [loaded, setLoaded] = useState(false);
 
     return (
         <>
-            { loaded ? null
-                : (
-                    <div className="loading-pulse border shadow rounded-lg p-4 max-w-sm w-full mx-auto">
-                        <div className="animate-pulse flex space-x-4 place-content-center ">
-                            <div className="rounded-full bg-slate-700 h-10 w-10" />
-                        </div>
-                    </div>
-                )}
+            { loaded ? null : <LoadingPulse /> }
             <img
                 src={images.sm}
                 alt={alt}
