@@ -7,23 +7,23 @@ import PhotoGrid from './PhotoGrid/PhotoGrid';
 
 function SuperheroGallery({ search }) {
     const dispatch = useDispatch();
-    const [superheros, pending] = useSelector(({ superhero }) => [superhero.value, superhero.pending]);
+    const [superheroes, pending] = useSelector(({ superhero }) => [superhero.value, superhero.pending]);
     const [searchResults, setSearchResults] = useState([]);
 
     useEffect(() => {
         dispatch(fetchSuperhero('all'));
-    }, []); // eslint-disable-line
+    }, []);
 
     // handle search
     useEffect(() => {
-        const results = superheros.filter((superhero) => superhero.name.toLowerCase().includes(search));
+        const results = superheroes.filter((superhero) => superhero.name.toLowerCase().includes(search));
         setSearchResults(results);
-    }, [search, superheros]);
+    }, [search, superheroes]);
 
     return (
         pending === true
             ? <div>Loading...</div>
-            : <PhotoGrid superheros={searchResults} />
+            : <PhotoGrid superheroes={searchResults} search={search} />
     );
 }
 

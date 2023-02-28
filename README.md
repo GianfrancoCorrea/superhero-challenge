@@ -1,6 +1,6 @@
 # superhero challenge
 
-react - redux toolkit - tailwindcss
+react - redux toolkit - tailwindcss -prop-types - airbnb eslint
 
 ## Demo
 

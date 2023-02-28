@@ -11,7 +11,7 @@ function App() {
     };
 
     return (
-        <div className="App relative ">
+        <div className="App relative">
             <Search handleSearch={handleSearch} />
             <SuperheroGallery search={search} />
         </div>
