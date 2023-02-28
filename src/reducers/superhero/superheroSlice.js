@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import fectchData from '../../API';
 
@@ -6,7 +7,7 @@ export const fetchSuperhero = createAsyncThunk(
     async (value) => {
         const response = await fectchData(value);
         return response;
-    }
+    },
 );
 
 const superheroSlice = createSlice({
