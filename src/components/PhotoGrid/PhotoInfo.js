@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 function PhotoInfo({ item }) {
     return (
         <div className="photo-info absolute bottom-0 text-left  bg-slate-800/[.35] p-2 w-full rounded-b-xl">
@@ -22,3 +24,13 @@ function PhotoInfo({ item }) {
 }
 
 export default PhotoInfo;
+
+PhotoInfo.propTypes = {
+    item: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        appearance: PropTypes.shape({
+            height: PropTypes.arrayOf(PropTypes.string).isRequired,
+            weight: PropTypes.arrayOf(PropTypes.string).isRequired,
+        }).isRequired,
+    }).isRequired,
+};

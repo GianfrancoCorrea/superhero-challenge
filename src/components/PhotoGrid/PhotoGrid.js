@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import PhotoImg from './PhotoImg';
 import PhotoInfo from './PhotoInfo';
 import Pagination from '../Pagination';
@@ -8,8 +9,8 @@ function PhotoGrid({ superheros }) {
     const itemsPerPage = 10;
     const pages = Math.ceil(superheros.length / itemsPerPage);
 
-    const handlePagination = (currentPage) => {
-        setCurrentPage(currentPage);
+    const handlePagination = (selectedPage) => {
+        setCurrentPage(selectedPage);
     };
 
     const paginationRender = (index) => index >= (currentPage - 1) * itemsPerPage && index < currentPage * itemsPerPage;
@@ -32,3 +33,7 @@ function PhotoGrid({ superheros }) {
 }
 
 export default PhotoGrid;
+
+PhotoGrid.propTypes = {
+    superheros: PropTypes.arrayOf(PropTypes.object).isRequired,
+};

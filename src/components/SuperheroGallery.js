@@ -1,5 +1,6 @@
 
 import { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchSuperhero } from '../reducers/superhero/superheroSlice';
 import PhotoGrid from './PhotoGrid/PhotoGrid';
@@ -27,3 +28,7 @@ function SuperheroGallery({ search }) {
 }
 
 export default SuperheroGallery;
+
+SuperheroGallery.propTypes = {
+    search: PropTypes.string.isRequired,
+};
