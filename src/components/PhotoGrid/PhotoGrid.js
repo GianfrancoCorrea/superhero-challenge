@@ -30,7 +30,10 @@ function PhotoGrid({ superheroes }) {
             <div className="photo-grid grid grid-cols-2 gap-1 text-slate-200 pb-7">
                 {superheroes?.map((item, index) => (
                     paginationLimit(index) && (
-                        <div className="photo-content md:flex flex-col rounded-xl  m-2 text-slate-100 items-center relative" key={`superhero-${item.id}`}>
+                        <div
+                            className="photo-content md:flex flex-col rounded-xl  m-2 text-slate-100 items-center relative"
+                            key={`superhero-${item.id}`}
+                        >
                             <PhotoImg alt={item.name} images={item.images} />
                             <PhotoInfo item={item} />
                         </div>

@@ -7,15 +7,11 @@ function PhotoInfo({ item }) {
 
             <div className="font-light drop-shadow-lg">
                 <p>
-                    {' '}
-                    Height:
-                    {' '}
+                    {' Height: '}
                     {item.appearance.height[1]}
                 </p>
                 <p>
-                    {' '}
-                    Weight:
-                    {' '}
+                    {' Weight: '}
                     {item.appearance.weight[1]}
                 </p>
             </div>

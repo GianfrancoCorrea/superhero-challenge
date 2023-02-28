@@ -23,7 +23,7 @@ function SuperheroGallery({ search }) {
     return (
         pending === true
             ? <div>Loading...</div>
-            : <PhotoGrid superheroes={searchResults} search={search} />
+            : <PhotoGrid superheroes={searchResults} />
     );
 }
 
