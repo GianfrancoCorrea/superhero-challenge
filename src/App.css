@@ -10,9 +10,15 @@
   overflow: scroll;
   overflow-x: hidden;
   width: 420px;
-  height: 800px;
+  height: 80vh;
 }
 
 .photo-content {
   max-height: 277px;
+}
+
+.loading-pulse {
+  width: 420px;
+  height: 277px;
+  background-color: #fafafa;
 }
