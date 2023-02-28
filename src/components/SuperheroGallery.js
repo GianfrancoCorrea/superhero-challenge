@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchSuperhero } from '../reducers/superhero/superheroSlice';
-import PhotoGrid from './PhotoGrid/PhotoGrid';
+import PhotoGrid from './PhotoGrid';
 
 function SuperheroGallery({ search }) {
     const dispatch = useDispatch();

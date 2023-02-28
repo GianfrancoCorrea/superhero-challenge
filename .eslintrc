@@ -43,6 +43,12 @@
                 "ignoreRegExpLiterals": true
             }
         ],
+        "no-restricted-exports": [
+            "warn",
+            {
+                "restrictedNamedExports": []
+            }
+        ],
         "curly": [
             "error",
             "all"
