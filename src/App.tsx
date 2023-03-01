@@ -4,9 +4,9 @@ import Search from './components/Search';
 import './App.css';
 
 function App() {
-    const [search, setSearch] = useState('');
+    const [search, setSearch] = useState<string>('');
 
-    const handleSearch = (e) => {
+    const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSearch(e.target.value);
     };
 

@@ -4,20 +4,24 @@ import fectchData from '../../API';
 
 export const fetchSuperhero = createAsyncThunk(
     'superhero/fetchSuperhero',
-    async (value) => {
+    async (value: string) => {
         const response = await fectchData(value);
         return response;
     },
 );
+
+interface SuperheroState {
+    value: Array<any>;
+    pending: boolean;
+}
 
 const superheroSlice = createSlice({
     name: 'superhero',
     initialState: {
         value: [],
         pending: false,
-    },
-    reducers: {
-    },
+    } as SuperheroState,
+    reducers: {},
     extraReducers: (builder) => {
         builder
             .addCase(fetchSuperhero.pending, (state) => {

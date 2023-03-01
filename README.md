@@ -15,8 +15,11 @@
 - [React](https://reactjs.org/) - A JavaScript library for building user interfaces
 - [Redux Toolkit](https://redux-toolkit.js.org/) - The official, opinionated, batteries-included toolset for efficient Redux development
 - [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for rapidly building custom designs
-- [Prop Types](https://www.npmjs.com/package/prop-types) - Runtime type checking for React props and similar objects
+- [Typescript](https://www.typescriptlang.org/) - TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
 - [Airbnb Eslint](https://www.npmjs.com/package/eslint-config-airbnb) - This package provides Airbnb's .eslintrc as an extensible shared config.
+
+## notes
+Sinse added typescript, i had to remove the eslint config due to some issues with the typescript parser that i couldn't solve in time and it block the build process.
 
 ## Installation
 
